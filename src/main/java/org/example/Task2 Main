@@ -1,0 +1,49 @@
+package org.example;
+import java.net.SocketImpl;
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(7, "Blue", "Green");
+
+        Rectangle rectangle = new Rectangle(2, 5, "Yellow", "Black");
+
+        Triangle triangle = new Triangle(3, 3, 3, "Red", "Orange");
+
+
+
+        System.out.println("Circle:");
+
+        System.out.println("Perimeter: " + circle.getPerimeter());
+
+        System.out.println("Area: " + circle.getArea());
+
+        System.out.println("Fill color: " + circle.getBackgroundColor());
+
+        System.out.println("Border color: " + circle.getShapeColor());
+
+
+
+        System.out.println("nRectangle:");
+
+        System.out.println("Perimeter: " + rectangle.getPerimeter());
+
+        System.out.println("Area: " + rectangle.getArea());
+
+        System.out.println("Fill color: " + rectangle.getBackgroundColor());
+
+        System.out.println("Border color: " + rectangle.getShapeColor());
+
+
+
+        System.out.println("nTriangle:");
+
+        System.out.println("Perimeter: " + triangle.getPerimeter());
+
+        System.out.println("Area: " + triangle.getArea());
+
+        System.out.println("Fill color: " + triangle.getBackgroundColor());
+
+        System.out.println("Border color: " + triangle.getShapeColor());
+
+
+    }
+}
