@@ -1,0 +1,67 @@
+package org.example;
+
+public class Rectangle implements Figures {
+
+    private double width;
+
+    private double height;
+
+    private String backgroundColor;
+
+    private String shapeColor;
+
+
+
+    public Rectangle(double width, double height, String backgroundColor, String shapeColor) {
+
+        this.width = width;
+
+        this.height = height;
+
+        this.backgroundColor = backgroundColor;
+
+        this.shapeColor = shapeColor;
+
+    }
+
+
+
+    @Override
+
+    public double getPerimeter() {
+
+        return 2 * (width + height);
+
+    }
+
+
+
+    @Override
+
+    public double getArea() {
+
+        return width * height;
+
+    }
+
+
+
+    @Override
+
+    public String getBackgroundColor() {
+
+        return backgroundColor;
+
+    }
+
+
+
+    @Override
+
+    public String getShapeColor() {
+
+        return shapeColor;
+
+    }
+
+}
