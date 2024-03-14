@@ -2,31 +2,44 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal ("Pushok",200,0);
-        Cat cat = new Cat( "Cat",200,0, 15, "Bonya");
-        Cat cat2 = new Cat ("Cat", 200, 0,  20, "Pushok");
-        Dog dog = new Dog("Dog",500,10, "Chernysh");
-        Dog dog2 = new Dog("Dog", 500,10,"Sharik");
-        Bowl bowl = new Bowl (20,30);
-        System.out.println(cat);
-        System.out.println(cat2);
-        System.out.println(dog);
-        System.out.println(dog2);
-        System.out.println("Animals: " + Animal.getCountOfAnimals());
-        System.out.println("Bowl");
-        for (Cat cat : cat) {
-            cat.feed(bowl);
-            System.out.println(cat);
+        Cat cat1 = new Cat( "Bonya");
+        Cat cat2 = new Cat ("Pushok");
+        Dog dog1 = new Dog("Chernysh");
+        Dog dog2 = new Dog("Sharik");
+        Animal[] animals = {cat1,cat2,dog1,dog2};
+        Bowl bowl = new Bowl (20);
+
+        for (Animal animal : animals) {
+
+            animal.run(300);
+
+            animal.swim(3);
+
         }
-        System.out.println(bowl);
-        bowl.add(20);
-        System.out.println(bowl);
-        for (Cat cat : cat2) {
-            cat.setSatiety(false);
-            cat.feed(bowl);
-            System.out.println(cat2);
+
+
+
+        cat1.eat(9);
+
+        cat2.eat(20);
+
+
+
+        bowl.addFood(5);
+
+
+
+        for (Animal animal : animals) {
+
+            if (animal instanceof Cat) {
+
+                Cat cat = (Cat) animal;
+
+                System.out.println(cat.getName() + " сытость: " + cat.satiety());
+
+            }
+
         }
-        System.out.println(bowl);
     }
     }
 

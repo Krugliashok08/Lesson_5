@@ -1,30 +1,40 @@
 package org.example;
 
- class Bowl  extends Cat {
-     private int food;
-     private int level;
-     Bowl (int food,int level) {
-         this.food = food;
-         this.level = level;
-     }
-     boolean level (int portion) {
-         if ( food < portion) {
-             return false;
-         }
-         food -= portion;
-         return true;
-     }
-     void add ( int food) {
-         if (this.food + food <= level) {
-             this.food +=  food;
-         }
+ public class Bowl {
+     private int foodAmount;
+
+
+
+     public Bowl(int foodAmount) {
+
+         this.foodAmount = foodAmount;
+
      }
 
-     @Override
-     public String toString() {
-         return "Bowl{" +
-                 "food=" + food +
-                 ", level=" + level +
-                 '}';
+
+
+     public void addFood(int food) {
+
+         if (food <= 0) {
+
+             System.out.println("Количество еды достаточно");
+
+         } else {
+
+             foodAmount += food;
+
+             System.out.println("Добавлено в миску " + food + " еды");
+
+         }
+
      }
+
+
+
+     public int getFoodAmount() {
+
+         return foodAmount;
+
+     }
+
  }

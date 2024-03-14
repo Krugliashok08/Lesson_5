@@ -1,91 +1,49 @@
 package org.example;
 
 class Cat extends Animal {
-    private String name;
 
-    public Cat(String name, int run, int swim, int appetite, String name1) {
-        super(name, run, swim, appetite);
-        this.name = name1;
+    private boolean satiety;
+
+
+
+    public Cat(String name) {
+
+        super(name, 200, 0);
+
+        satiety = false;
+
     }
 
-    private int run;
 
-    public Cat(String name, int run, int swim, int appetite, int run1) {
-        super(name, run, swim, appetite);
-        this.run = run1;
-    }
 
-    private int swim;
+    public void eat(int foodAmount) {
 
-    public Cat(int swim) {
-        this.swim = swim;
-    }
+        if (foodAmount <= 0) {
 
-    private int appetite;
+            System.out.println("Количество еды достаточно");
 
-    public Cat(String name, int run, int swim, int appetite) {
-        super(name, run, swim, appetite);
-        this.appetite = appetite;
-    }
+        } else if (foodAmount > 10) {
 
-    private boolean satiety;{
+            System.out.println("Количество еды недостаточно");
 
-    satiety = false;}
+        } else {
 
-    public void setSatiety(boolean satiety) {
-        this.satiety = satiety;
-    }
+            satiety = true;
 
-    void feed(Bowl bowl) {
-        if (!satiety) {
-            satiety = bowl.level(appetite);
+            System.out.println("Кот покушал");
+
         }
+
     }
 
-    @Override
-    public String toString() {
-        return "Cat{" +
-                "name='" + name + '\'' +
-                ", run=" + run +
-                ", swim=" + swim +
-                ", appetite=" + appetite +
-                ", satiety=" + satiety +
-                '}';
+
+
+    public boolean satiety() {
+
+        return satiety;
+
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRun() {
-        return run;
-    }
-
-    public void setRun(int run) {
-        this.run = run;
-    }
-
-    public int getSwim() {
-        return swim;
-    }
-
-    public void setSwim(int swim) {
-        this.swim = swim;
-    }
-
-    public int getAppetite() {
-        return appetite;
-    }
-
-    public void setAppetite(int appetite) {
-        this.appetite = appetite;
-    }
 }
-
-
 
 
