@@ -1,0 +1,12 @@
+package org.example;
+
+interface Figures {
+
+    double getPerimeter();
+
+    double getArea();
+
+    String getBackgroundColor();
+
+    String getShapeColor();
+}
